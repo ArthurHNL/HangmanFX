@@ -67,7 +67,7 @@ public abstract class Popup {
 		if (!validate) {
 			popup.close();
 		} else {
-			if (t.getText().isEmpty() || t.getText().contains(" ")) {
+			if (t.getText().isEmpty() ||!t.getText().matches("^[a-zA-Z]*$")) {
 				le.setVisible(true);
 			} else {
 				popup.close();
