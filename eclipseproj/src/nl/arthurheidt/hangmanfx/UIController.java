@@ -35,6 +35,8 @@ public class UIController implements Initializable {
 	@FXML
 	private HBox alphabet, theWord;
 	@FXML
+	private Label charCount;
+	@FXML
 	private Arc mouth;
 	@FXML
 	private Shape hang1, hang2, hang3, hang4, hang5, hang6, hang7, hang8, hang9, hang10, hang11;
@@ -46,7 +48,8 @@ public class UIController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		//Get the word
 		word = Popup.getString("Welcome", "Please enter a word for your opponent...", true).toUpperCase();
-		
+		//Set count of characters
+		charCount.setText("Length: " + word.length() + " characters.");
 		// Generate the guess buttons
 		for (char c = 'A'; c <= 'Z'; c++) {
 			String content = "" + c;
@@ -75,7 +78,6 @@ public class UIController implements Initializable {
 		Button source = (Button) e.getSource();
 		source.setDisable(true);
 		boolean wasInWord = parseLetter(source.getText());
-		System.out.println(wasInWord);
 		if (!wasInWord) {
 			drawNextPart();
 		}
@@ -91,7 +93,10 @@ public class UIController implements Initializable {
 			for (Node n : alphabet.getChildren()) {
 				n.setDisable(true);
 			}
-			Popup.showAndQuit("TOO BAD", "Seems like you've lost...", "Exit", 0);
+			for (Node n : theWord.getChildren()) {
+				n.setVisible(true);
+			}
+			Popup.showAndQuit("YOU LOSE", "The correct word was: " + word + ".", "Exit", 0);
 		} else {
 			boolean win = true;
 			for (Node n : theWord.getChildren()) {
