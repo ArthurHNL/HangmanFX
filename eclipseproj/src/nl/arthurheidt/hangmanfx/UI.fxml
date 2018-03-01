@@ -24,7 +24,7 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgray;">
+      <AnchorPane fx:id="man" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgray;">
          <children>
             <Rectangle fx:id="hang1" arcHeight="5.0" arcWidth="5.0" height="20.0" layoutX="23.0" layoutY="464.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="200.0" />
             <Rectangle fx:id="hang2" arcHeight="5.0" arcWidth="5.0" height="450.0" layoutX="23.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="20.0" />
