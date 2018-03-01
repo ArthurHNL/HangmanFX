@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<SplitPane fx:id="rootPane" dividerPositions="0.75" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.arthurheidt.hangmanfx.UIController">
+   <items>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox fx:id="theWord" alignment="CENTER" layoutX="14.0" layoutY="103.0" prefHeight="40.0" prefWidth="723.0" style="-fx-border-color: black;" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ButtonBar layoutX="433.0" layoutY="192.0" prefHeight="40.0" prefWidth="313.0" />
+                  <HBox fx:id="alphabet" alignment="CENTER" layoutX="12.0" layoutY="103.0" prefHeight="40.0" prefWidth="723.0" style="-fx-border-color: black;" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgray;">
+         <children>
+            <Rectangle fx:id="hang1" arcHeight="5.0" arcWidth="5.0" height="20.0" layoutX="23.0" layoutY="464.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="200.0" />
+            <Rectangle fx:id="hang2" arcHeight="5.0" arcWidth="5.0" height="450.0" layoutX="23.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="20.0" />
+            <Rectangle fx:id="hang3" arcHeight="5.0" arcWidth="5.0" fill="#111111" height="20.0" layoutX="43.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="100.0" />
+            <Rectangle fx:id="hang4" arcHeight="5.0" arcWidth="5.0" height="20.0" layoutX="22.0" layoutY="36.0" rotate="155.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="110.0" />
+            <Rectangle fx:id="hang5" arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="133.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="10.0" />
+            <Circle fx:id="hang6" layoutX="138.0" layoutY="129.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Rectangle fx:id="hang7" arcHeight="5.0" arcWidth="5.0" height="200.0" layoutX="133.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="10.0" />
+            <Rectangle fx:id="hang8" arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="118.0" layoutY="160.0" rotate="135.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="10.0" />
+            <Rectangle fx:id="hang9" arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="147.0" layoutY="160.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="10.0" />
+            <Rectangle fx:id="hang10" arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="118.0" layoutY="345.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="10.0" />
+            <Rectangle fx:id="hang11" arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="147.0" layoutY="345.0" rotate="315.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="10.0" />
+            <AnchorPane fx:id="face" layoutX="114.0" layoutY="116.0" prefHeight="40.0" prefWidth="49.0" visible="false">
+               <children>
+                  <Circle fill="WHITE" layoutX="20.0" layoutY="5.0" radius="4.0" smooth="false" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="WHITE" layoutX="30.0" layoutY="5.0" radius="4.0" smooth="false" stroke="BLACK" strokeType="INSIDE" />
+                  <Arc fx:id="mouth" fill="WHITE" layoutX="25.0" layoutY="20.0" length="180.0" radiusX="12.0" radiusY="10.0" smooth="false" startAngle="180.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
