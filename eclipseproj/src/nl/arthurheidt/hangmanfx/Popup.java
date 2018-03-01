@@ -50,6 +50,7 @@ public abstract class Popup {
 		b.setOnAction(e -> {
 			validateAndExit(popup, t, validate, le);
 		});
+		popup.setOnCloseRequest(e -> {System.exit(0);});
 
 		VBox vb = new VBox(10);
 		vb.setAlignment(Pos.CENTER);
